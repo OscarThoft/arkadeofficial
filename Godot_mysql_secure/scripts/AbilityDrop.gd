@@ -43,6 +43,3 @@ func _on_AbilityDrop_body_entered(body):
 		body.ability(type)
 		queue_free()
 
-
-func _on_Timer_timeout():
-	var time = 1
