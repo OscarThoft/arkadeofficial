@@ -17,13 +17,14 @@ func _ready():
 	$SpawnPosition.position.x = rngSpawn.randf_range(0.0,700.0)
 	$EnemyTimer.wait_time = rng.randf_range(2.0, 3.0)
 	$EnemyTimer.start()
+	ui.scoreVisible(true)
 
 func _process(delta):
 	$Player1.shipColor(colorState.color1)
 	$Player2.shipColor(colorState.color2)
 
 func saveScore():
-	stats.highscoreUpdate(score)
+	colorState.highscoreUpdate(score)
 
 func scoreUpdate(scorePlus):
 	score += scorePlus

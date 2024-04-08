@@ -1,8 +1,13 @@
 extends Control
 
+func scoreVisible(i):
+	if i:
+		$Score.visible = true
+	else:
+		$Score.visible = true
 
 func setScore(score):
-	$Label.text = str(score)
+	$Score.text = "Score: " + str(score)
 
 func _ready():
-	pass 
+	$Highscore.text = "Highscore: " + str(colorState.highscore)
